@@ -1,10 +1,10 @@
 import { create } from "zustand";
-const domain = "http://localhost:3001";
+const domain = "https://a-final-hackathon-backend.vercel.app";
 const NewsStore = (set: any) => ({
   articles: [],
   singleArticle: {},
   getAllArticles: async () => {
-    const res = await fetch(`http://localhost:3001/news`);
+    const res = await fetch(`https://a-final-hackathon-backend.vercel.app/news`);
     const data = await res.json();
     console.log(data);
 
@@ -16,7 +16,7 @@ const NewsStore = (set: any) => ({
     });
   },
   getSingleArticle: async (id: string) => {
-    const res = await fetch(`http://localhost:3001/news/${id}`);
+    const res = await fetch(`https://a-final-hackathon-backend.vercel.app/news/${id}`);
     const data = await res.json();
     console.log(data);
 
